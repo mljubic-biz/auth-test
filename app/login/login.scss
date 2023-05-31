@@ -1,0 +1,77 @@
+@import "@spotted-zebra-uk/sz-theme.theme/index.module.scss";
+
+.login {
+  min-width: 300px;
+  max-width: 400px;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+
+  &__top {
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  &__logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  &__title-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    height: 126px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .login-form {
+    min-height: min-content;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-height: 550px) {
+  .login {
+    display: flex;
+    flex-direction: column;
+    min-height: min-content;
+    max-height: 820px;
+
+    &__top {
+      min-height: min-content;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media only screen and (max-height: 550px) {
+  .login {
+    &__title-wrapper {
+      min-height: 220px;
+    }
+
+    .login-form {
+      min-height: 220px;
+    }
+  }
+}
